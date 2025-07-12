@@ -55,6 +55,15 @@ setInterval(() => {
 setTimeout(() => {
     document.querySelector(".childContainer").style.background = "white";
 }, 5000);
+
+// OR
+
+function hello(){
+    console.log("Hello World");
+}
+
+setTimeout(hello, 5000);
+// This code sets a timeout to execute the `hello` function after 5 seconds, which
 // This code sets a timeout to change the background color of the element with the class "childContainer" to white after 5 seconds.
 // It will stop the color change after 5 seconds, making the background color white only once.
 

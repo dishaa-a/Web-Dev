@@ -6,6 +6,54 @@
 // Promises are the solution to callback hell, allowing for cleaner and more manageable code.
 // Promises are promised to return a value in the future, and they can be chained together using `.then()` and `.catch()` methods.
 
+let getPromise = () => {
+    return new Promise((resolve, reject) => {
+    console.log("I am a promise")
+    resolve("success"); 
+    });      // This will resolve the promise with the value 123
+};
+
+
+let promise = getPromise();
+promise.then(() => {
+    console.log("Promise resolved successfully")
+});
+
+let promise1 = new Promise((resolve, reject) => {
+    console.log("I am a promise")
+    reject("some error"); 
+})
+
+/*function getData(dataId, getNextData){
+    return new Promise((resolve, reject) => { 
+        setTimeout(() => {
+        console.log("data ", dataId);
+        resolve("success");
+        if(getNextData){           // If there is a next data to fetch, call the callback function
+            getNextData();    
+        }
+    }, 5000);
+ });
+}
+ console.log("getting data 1....");
+ getData(1)
+    .then((res) => {
+      console.log("getting data 2....");
+      return getData(2); 
+    })
+    .then((res) => {
+        console.log("getting data 3....");
+        return getData(3);
+    })
+    .then((res) => {    
+        console.log(res);
+});          */
+
+// .then() method is used to handle the resolved value of the promise.
+// .catch() method is used to handle the rejected value of the promise.
+// promise.then((value) => {....})
+// promise.catch((error) => {....})
+
 let prom1 = new Promise((resolve, reject) => {
 
     // Rejecting the promise if a condition is met
